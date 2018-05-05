@@ -12,8 +12,9 @@ class ViewController: UIViewController {
 
     var resource: Resource = .pokemon
 
-    var pokemons: [Item] = []
-    var moves: [Item]    = []
+    var pokemons: [Item]  = []
+    var moves: [Item]     = []
+    var abilities: [Item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,8 @@ class ViewController: UIViewController {
         self.resource = .pokemon
         plistParser.parse(resource: .pokemon)
 
-        self.resource = .move
-        plistParser.parse(resource: .move)
-        // plistParser.parse(resource: .ability)
+        self.resource = .ability
+        plistParser.parse(resource: .ability)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,8 +39,8 @@ extension ViewController: ParserDelegate {
     func didLoad(items: [Item]) {
         switch self.resource {
         case .pokemon: self.loadedPokemons(items: items)
-        case .move: self.loadedMoves(items: items)
-        case .ability: break
+        case .move:    break
+        case .ability: self.loadedAbilities(items: items)
         }
     }
 
@@ -48,21 +48,17 @@ extension ViewController: ParserDelegate {
         self.pokemons = items
     }
 
-    func loadedMoves(items: [Item]) {
+    func loadedAbilities(items: [Item]) {
 
-        self.moves = items
+        self.abilities = items
 
         let pokemons = self.pokemons.map { pokemon -> Item in
             var pokemon = pokemon
-            guard let moves = pokemon["moves"] as? [[String: Any]] else { return pokemon }
-            pokemon["moves"] = moves.map { pokemonMove -> Item in
-                var learnedMove = pokemonMove
-                guard let name = pokemonMove["name"] as? String,
-                      let move = self.getMove(name: name),
-                      let id = move["id"] as? String else { return pokemonMove }
-
-                learnedMove["id"] = id
-                return learnedMove
+            guard let abilities = pokemon["abilitys"] as? [String] else { return pokemon }
+            pokemon["abilitys"] = abilities.map { pokemonAbility -> [String: String] in
+                guard let ability = self.getAbility(name: pokemonAbility),
+                      let id = ability["id"] as? String else { return ["name": pokemonAbility] }
+                return ["name": pokemonAbility, "id": id]
             }
 
             return pokemon
@@ -83,10 +79,10 @@ extension ViewController: ParserDelegate {
         createPlist(items: pokemons)
     }
 
-    func getMove(name: String) -> Item? {
-        return self.moves.filter { move in
-            guard let moveName = move["name"] as? String else { return false }
-            return name == moveName
+    func getAbility(name: String) -> Item? {
+        return self.abilities.filter { ability in
+            guard let abilityName = ability["name"] as? String else { return false }
+            return name == abilityName
         }.first
     }
 }
