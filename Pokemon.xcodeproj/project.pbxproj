@@ -13,7 +13,7 @@
 		0D86336A209DB06700C9672A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D863369209DB06700C9672A /* Assets.xcassets */; };
 		0D86336D209DB06700C9672A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D86336B209DB06700C9672A /* LaunchScreen.storyboard */; };
 		D7BA11703DA79E595B16649C /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = D7BA16D3C4DE7F735DF19B62 /* abilities.json */; };
-		D7BA11AD91F5C8E3DF306B2C /* ParserResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA15C8BEA8E26918DA0DAE /* ParserResource.swift */; };
+		D7BA11AD91F5C8E3DF306B2C /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */; };
 		D7BA11D6FD215794F113CE93 /* abilities.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1863CA92B0DA13D2B09A /* abilities.xml */; };
 		D7BA12512557CAB8E1F6A4BE /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12A779073245C241C89C /* Plist.swift */; };
 		D7BA14CC5B91D652BC47E05A /* moves.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1B1FD1C1B35B57F84BC9 /* moves.xml */; };
@@ -37,7 +37,7 @@
 		D7BA11A8B6F890F36737C037 /* moves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = moves.json; path = Pokemon/Resources/moves.json; sourceTree = SOURCE_ROOT; };
 		D7BA12A779073245C241C89C /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		D7BA14466EC1E95106140E69 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		D7BA15C8BEA8E26918DA0DAE /* ParserResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserResource.swift; sourceTree = "<group>"; };
+		D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		D7BA16D3C4DE7F735DF19B62 /* abilities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = abilities.json; path = Pokemon/Resources/abilities.json; sourceTree = SOURCE_ROOT; };
 		D7BA16E19BC0545154B17D20 /* Xml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xml.swift; sourceTree = "<group>"; };
 		D7BA1863CA92B0DA13D2B09A /* abilities.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = abilities.xml; path = Pokemon/Resources/abilities.xml; sourceTree = SOURCE_ROOT; };
@@ -114,7 +114,7 @@
 				D7BA14466EC1E95106140E69 /* Parser.swift */,
 				D7BA12A779073245C241C89C /* Plist.swift */,
 				D7BA16E19BC0545154B17D20 /* Xml.swift */,
-				D7BA15C8BEA8E26918DA0DAE /* ParserResource.swift */,
+				D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				D7BA1FF4D7CE153B9F99B23E /* Parser.swift in Sources */,
 				D7BA12512557CAB8E1F6A4BE /* Plist.swift in Sources */,
 				D7BA1B9BF43E858829E290CF /* Xml.swift in Sources */,
-				D7BA11AD91F5C8E3DF306B2C /* ParserResource.swift in Sources */,
+				D7BA11AD91F5C8E3DF306B2C /* Parseable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@
 
 import Foundation
 
-final class Xml: NSObject, ParseResource {
+final class Xml: NSObject, Parseable {
 
     var item: Item    = [:]
     var items: [Item] = []

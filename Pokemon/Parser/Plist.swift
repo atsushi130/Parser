@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Plist: ParseResource {
+struct Plist: Parseable {
 
     func load(resource: Resource, completionHandler: @escaping ([Item]) -> Void) {
         guard let path = Bundle.main.path(forResource: resource.name, ofType: ".plist"),

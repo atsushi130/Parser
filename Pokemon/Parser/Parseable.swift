@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol ParseResource {
+protocol Parseable {
     init()
     func load(resource: Resource, completionHandler: @escaping ([Item]) -> Void)
 }

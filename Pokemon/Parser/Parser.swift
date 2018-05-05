@@ -10,7 +10,7 @@ protocol ParserDelegate {
 }
 
 typealias Item = [String: Any]
-final class Parser<T: ParseResource>: NSObject {
+final class Parser<T: Parseable>: NSObject {
 
     var delegate: ParserDelegate? = nil
 
