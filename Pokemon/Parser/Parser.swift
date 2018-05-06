@@ -27,12 +27,14 @@ enum Resource: String {
     case pokemon
     case move
     case ability
+    case type
 
     var name: String {
         switch self {
         case .pokemon: return "pokemons"
         case .move:    return "moves"
         case .ability: return "abilities"
+        case .type:    return "types"
         }
     }
 
