@@ -2886,7 +2886,7 @@
 		<key>accuracy</key>
 		<string>90</string>
 		<key>additionEffect</key>
-		<string>18</string>
+		<string>-</string>
 		<key>additionProbabiliry</key>
 		<string>-</string>
 		<key>category</key>
@@ -7766,7 +7766,7 @@
 		<key>accuracy</key>
 		<string>-</string>
 		<key>additionEffect</key>
-		<string>20</string>
+		<string>-</string>
 		<key>additionProbabiliry</key>
 		<string>-</string>
 		<key>category</key>
@@ -10326,7 +10326,7 @@
 		<key>accuracy</key>
 		<string>100</string>
 		<key>additionEffect</key>
-		<string>12</string>
+		<string>-</string>
 		<key>additionProbabiliry</key>
 		<string>-</string>
 		<key>category</key>
@@ -10966,7 +10966,7 @@
 		<key>accuracy</key>
 		<string>-</string>
 		<key>additionEffect</key>
-		<string>21</string>
+		<string>-</string>
 		<key>additionProbabiliry</key>
 		<string>-</string>
 		<key>category</key>
