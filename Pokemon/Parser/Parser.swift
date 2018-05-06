@@ -30,6 +30,7 @@ enum Resource: String {
     case type
     case additionEffect
     case moveCategory
+    case moveTarget
 
     var name: String {
         switch self {
@@ -39,6 +40,7 @@ enum Resource: String {
         case .type:           return "types"
         case .additionEffect: return "additionEffects"
         case .moveCategory:   return "moveCategories"
+        case .moveTarget:     return "moveTargets"
         }
     }
 
