@@ -9,11 +9,29 @@
 import Foundation
 import RealmSwift
 
-final class Repository<ObjectType: Object> {
+public final class Repository<ObjectType: Object> {
 
     var realm: Realm
 
-    init(realm: Realm) {
+    static var defaultRealm: Realm? {
+        return self.realm(name: "default")
+    }
+
+    static func realm(name: String) -> Realm? {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let realmURL = documentsURL?.appendingPathComponent("\(name).realm")
+
+        var config = Realm.Configuration(schemaVersion: 1,
+                migrationBlock: { migration, oldSchemaVersion in
+                    if (oldSchemaVersion < 1) {}
+                })
+
+        config.fileURL = realmURL!
+        let realm = try! Realm(configuration: config)
+        return realm
+    }
+
+    init(realm: Realm = Repository<ObjectType>.defaultRealm!) {
         self.realm = realm
     }
 
@@ -33,7 +51,7 @@ final class Repository<ObjectType: Object> {
         return self.findAll().filter(predicate)
     }
 
-    func add(_ objects: [ObjectType]) {
+    public func add(_ objects: [ObjectType]) {
         try! self.realm.write {
             self.realm.add(objects, update: true)
         }
