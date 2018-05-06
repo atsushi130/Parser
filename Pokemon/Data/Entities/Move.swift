@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import  RealmSwift
+import RealmSwift
 
 public final class Move: Object {
 
@@ -25,7 +25,7 @@ public final class Move: Object {
     @objc dynamic var protect = true
     @objc dynamic var steal = true
     @objc dynamic var target = "" // 型を MoveTarget にしたい
-    @objc dynamic var type = "" // 型を Type にしたい
+    @objc dynamic var type: Type!
     @objc dynamic var vital: Bool = true
 
     public convenience init(move: [String: Any]) {
@@ -72,7 +72,7 @@ public final class Move: Object {
         self.protect = Bool(move["protect"] as! String)!
         self.steal = Bool(move["steal"] as! String)!
         self.target = move["target"] as! String
-        self.type = move["type"] as! String
+        self.type = Type.repository.findBy(name: move["type"] as! String)!
 
         if let vital = move["vital"] as? String {
             if vital == "-" {
