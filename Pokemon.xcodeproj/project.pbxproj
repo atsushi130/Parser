@@ -24,12 +24,14 @@
 		0DE3BA20209F444C00DA1FA1 /* additionEffects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3BA1F209F444C00DA1FA1 /* additionEffects.plist */; };
 		0DE3BA22209F4B6E00DA1FA1 /* moveCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3BA21209F4B6E00DA1FA1 /* moveCategories.plist */; };
 		0DE3BA24209F4C4C00DA1FA1 /* moveTargets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3BA23209F4C4C00DA1FA1 /* moveTargets.plist */; };
+		D7BA111E1EE73CB918FDCBDC /* MoveCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12DB3CD69CB4516BC7BA /* MoveCategory.swift */; };
 		D7BA11703DA79E595B16649C /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = D7BA16D3C4DE7F735DF19B62 /* abilities.json */; };
 		D7BA11AD91F5C8E3DF306B2C /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */; };
 		D7BA11D6FD215794F113CE93 /* abilities.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1863CA92B0DA13D2B09A /* abilities.xml */; };
 		D7BA11DED10525635A8452D2 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12FD2D49DB2607DC35F9 /* Move.swift */; };
 		D7BA12512557CAB8E1F6A4BE /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12A779073245C241C89C /* Plist.swift */; };
 		D7BA125E8BE49B0F60848C7A /* AdditionEffectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA121D32606090C84DD1D4 /* AdditionEffectRepository.swift */; };
+		D7BA13ABD52593573AA018AE /* MoveCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA11F7293E4D001457370E /* MoveCategoryRepository.swift */; };
 		D7BA14CC5B91D652BC47E05A /* moves.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1B1FD1C1B35B57F84BC9 /* moves.xml */; };
 		D7BA15FB5079BE126182107C /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA14F0107CD0AA37BD2FEB /* Type.swift */; };
 		D7BA168DEAC76A4D3CCFAC40 /* AdditionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA1320D2530BAB51D9C16B /* AdditionEffect.swift */; };
@@ -87,8 +89,10 @@
 		0DE3BA23209F4C4C00DA1FA1 /* moveTargets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = moveTargets.plist; sourceTree = "<group>"; };
 		D7BA11A5455C76F79A58A01C /* abilities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = abilities.plist; path = Pokemon/Resources/abilities.plist; sourceTree = SOURCE_ROOT; };
 		D7BA11A8B6F890F36737C037 /* moves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = moves.json; path = Pokemon/Resources/moves.json; sourceTree = SOURCE_ROOT; };
+		D7BA11F7293E4D001457370E /* MoveCategoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCategoryRepository.swift; sourceTree = "<group>"; };
 		D7BA121D32606090C84DD1D4 /* AdditionEffectRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionEffectRepository.swift; sourceTree = "<group>"; };
 		D7BA12A779073245C241C89C /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		D7BA12DB3CD69CB4516BC7BA /* MoveCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCategory.swift; sourceTree = "<group>"; };
 		D7BA12FD2D49DB2607DC35F9 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		D7BA1320D2530BAB51D9C16B /* AdditionEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionEffect.swift; sourceTree = "<group>"; };
 		D7BA138AD8004417FF741CBC /* MoveRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				D7BA138AD8004417FF741CBC /* MoveRepository.swift */,
 				D7BA1CB58C3BE968A7E1DB4B /* TypeRepository.swift */,
 				D7BA121D32606090C84DD1D4 /* AdditionEffectRepository.swift */,
+				D7BA11F7293E4D001457370E /* MoveCategoryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				D7BA12FD2D49DB2607DC35F9 /* Move.swift */,
 				D7BA14F0107CD0AA37BD2FEB /* Type.swift */,
 				D7BA1320D2530BAB51D9C16B /* AdditionEffect.swift */,
+				D7BA12DB3CD69CB4516BC7BA /* MoveCategory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -420,6 +426,8 @@
 				D7BA1A27046BB7AB7CF962A1 /* TypeRepository.swift in Sources */,
 				D7BA168DEAC76A4D3CCFAC40 /* AdditionEffect.swift in Sources */,
 				D7BA125E8BE49B0F60848C7A /* AdditionEffectRepository.swift in Sources */,
+				D7BA111E1EE73CB918FDCBDC /* MoveCategory.swift in Sources */,
+				D7BA13ABD52593573AA018AE /* MoveCategoryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
