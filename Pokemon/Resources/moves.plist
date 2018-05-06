@@ -576,7 +576,7 @@
 		<key>direct</key>
 		<string>true</string>
 		<key>id</key>
-		<string>15      </string>
+		<string>15</string>
 		<key>information</key>
 		<string>通常攻撃</string>
 		<key>magicCoat</key>
@@ -736,7 +736,7 @@
 		<key>direct</key>
 		<string>true</string>
 		<key>id</key>
-		<string>19      </string>
+		<string>19</string>
 		<key>information</key>
 		<string>ターン目に飛び上がり、2ターン目に攻撃する。飛んでいる間はほとんどのわざを受けない</string>
 		<key>magicCoat</key>
@@ -19200,7 +19200,7 @@
 		<key>type</key>
 		<string>かくとう</string>
 		<key>vital</key>
-		<string>◎</string>
+		<string>true</string>
 	</dict>
 	<dict>
 		<key>accuracy</key>
@@ -20960,7 +20960,7 @@
 		<key>type</key>
 		<string>こおり</string>
 		<key>vital</key>
-		<string>◎</string>
+		<string>true</string>
 	</dict>
 	<dict>
 		<key>accuracy</key>
