@@ -12,6 +12,8 @@
 		0D863368209DB06700C9672A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D863366209DB06700C9672A /* Main.storyboard */; };
 		0D86336A209DB06700C9672A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D863369209DB06700C9672A /* Assets.xcassets */; };
 		0D86336D209DB06700C9672A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D86336B209DB06700C9672A /* LaunchScreen.storyboard */; };
+		0DE3BA02209EAF1800DA1FA1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA01209EAF1800DA1FA1 /* Realm.framework */; };
+		0DE3BA04209EAF2900DA1FA1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA03209EAF2900DA1FA1 /* RealmSwift.framework */; };
 		D7BA11703DA79E595B16649C /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = D7BA16D3C4DE7F735DF19B62 /* abilities.json */; };
 		D7BA11AD91F5C8E3DF306B2C /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */; };
 		D7BA11D6FD215794F113CE93 /* abilities.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1863CA92B0DA13D2B09A /* abilities.xml */; };
@@ -33,6 +35,8 @@
 		0D863369209DB06700C9672A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D86336C209DB06700C9672A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D86336E209DB06700C9672A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE3BA01209EAF1800DA1FA1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		0DE3BA03209EAF2900DA1FA1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
 		D7BA11A5455C76F79A58A01C /* abilities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = abilities.plist; path = Pokemon/Resources/abilities.plist; sourceTree = SOURCE_ROOT; };
 		D7BA11A8B6F890F36737C037 /* moves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = moves.json; path = Pokemon/Resources/moves.json; sourceTree = SOURCE_ROOT; };
 		D7BA12A779073245C241C89C /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE3BA04209EAF2900DA1FA1 /* RealmSwift.framework in Frameworks */,
+				0DE3BA02209EAF1800DA1FA1 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 		0D863356209DB06600C9672A = {
 			isa = PBXGroup;
 			children = (
+				0DE3BA00209EAEFD00DA1FA1 /* Frameworks */,
 				0D863361209DB06600C9672A /* Pokemon */,
 				0D863360209DB06600C9672A /* Products */,
 			);
@@ -96,6 +103,15 @@
 				D7BA1B92628EC41752A5F5D5 /* Xml */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0DE3BA00209EAEFD00DA1FA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DE3BA03209EAF2900DA1FA1 /* RealmSwift.framework */,
+				0DE3BA01209EAF1800DA1FA1 /* Realm.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		D7BA11308994450B94630B65 /* Plist */ = {
@@ -147,6 +163,7 @@
 				0D86335B209DB06600C9672A /* Sources */,
 				0D86335C209DB06600C9672A /* Frameworks */,
 				0D86335D209DB06600C9672A /* Resources */,
+				0DE3B9FF209EAB6A00DA1FA1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -210,6 +227,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DE3B9FF209EAB6A00DA1FA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0D86335B209DB06600C9672A /* Sources */ = {
@@ -360,6 +395,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SYG4Q97TY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Pokemon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.atsushi130.Pokemon;
@@ -375,6 +414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SYG4Q97TY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Pokemon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.atsushi130.Pokemon;
