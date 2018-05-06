@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         self.resource = .type
         plistParser.parse(resource: .type)
 
+        self.resource = .additionEffect
+        plistParser.parse(resource: .additionEffect)
+
         self.resource = .move
         plistParser.parse(resource: .move)
     }
@@ -53,14 +56,17 @@ extension ViewController: ParserDelegate {
         switch self.resource {
         case .move: self.loadedMoves(items: items)
         case .type: self.loadedTypes(items: items)
+        case .additionEffect: self.loadedAdditionEffects(items: items)
         default: break
         }
     }
 
     func loadedMoves(items: [Item]) {
+
         let moves = items.enumerated().map { (index, item) -> Move in
             Move(move: item)
         }
+
         Move.repository.add(moves)
     }
 
@@ -69,5 +75,12 @@ extension ViewController: ParserDelegate {
             Type(type: type)
         }
         Type.repository.add(types)
+    }
+
+    func loadedAdditionEffects(items: [Item]) {
+        let additionEffects = items.map { additionEffect -> AdditionEffect in
+            AdditionEffect(additionEffect: additionEffect)
+        }
+        AdditionEffect.repository.add(additionEffects)
     }
 }
