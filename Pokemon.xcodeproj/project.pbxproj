@@ -32,6 +32,8 @@
 		D7BA12512557CAB8E1F6A4BE /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12A779073245C241C89C /* Plist.swift */; };
 		D7BA125E8BE49B0F60848C7A /* AdditionEffectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA121D32606090C84DD1D4 /* AdditionEffectRepository.swift */; };
 		D7BA13ABD52593573AA018AE /* MoveCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA11F7293E4D001457370E /* MoveCategoryRepository.swift */; };
+		D7BA1462E2D1FAE3118A3943 /* MoveTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA180C8075C8B50FD23D4E /* MoveTarget.swift */; };
+		D7BA14932D2A0C186339B666 /* MoveTargetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA1E3CD191CACBF502DF56 /* MoveTargetRepository.swift */; };
 		D7BA14CC5B91D652BC47E05A /* moves.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1B1FD1C1B35B57F84BC9 /* moves.xml */; };
 		D7BA15FB5079BE126182107C /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA14F0107CD0AA37BD2FEB /* Type.swift */; };
 		D7BA168DEAC76A4D3CCFAC40 /* AdditionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA1320D2530BAB51D9C16B /* AdditionEffect.swift */; };
@@ -101,10 +103,12 @@
 		D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		D7BA16D3C4DE7F735DF19B62 /* abilities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = abilities.json; path = Pokemon/Resources/abilities.json; sourceTree = SOURCE_ROOT; };
 		D7BA16E19BC0545154B17D20 /* Xml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xml.swift; sourceTree = "<group>"; };
+		D7BA180C8075C8B50FD23D4E /* MoveTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTarget.swift; sourceTree = "<group>"; };
 		D7BA1863CA92B0DA13D2B09A /* abilities.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = abilities.xml; path = Pokemon/Resources/abilities.xml; sourceTree = SOURCE_ROOT; };
 		D7BA1980F62F3B0DAF2B13C1 /* moves.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = moves.plist; path = Pokemon/Resources/moves.plist; sourceTree = SOURCE_ROOT; };
 		D7BA1B1FD1C1B35B57F84BC9 /* moves.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = moves.xml; path = Pokemon/Resources/moves.xml; sourceTree = SOURCE_ROOT; };
 		D7BA1CB58C3BE968A7E1DB4B /* TypeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeRepository.swift; sourceTree = "<group>"; };
+		D7BA1E3CD191CACBF502DF56 /* MoveTargetRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTargetRepository.swift; sourceTree = "<group>"; };
 		D7BA1FF6C2FE7C2761205033 /* pokemons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = pokemons.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +207,7 @@
 				D7BA1CB58C3BE968A7E1DB4B /* TypeRepository.swift */,
 				D7BA121D32606090C84DD1D4 /* AdditionEffectRepository.swift */,
 				D7BA11F7293E4D001457370E /* MoveCategoryRepository.swift */,
+				D7BA1E3CD191CACBF502DF56 /* MoveTargetRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				D7BA14F0107CD0AA37BD2FEB /* Type.swift */,
 				D7BA1320D2530BAB51D9C16B /* AdditionEffect.swift */,
 				D7BA12DB3CD69CB4516BC7BA /* MoveCategory.swift */,
+				D7BA180C8075C8B50FD23D4E /* MoveTarget.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -428,6 +434,8 @@
 				D7BA125E8BE49B0F60848C7A /* AdditionEffectRepository.swift in Sources */,
 				D7BA111E1EE73CB918FDCBDC /* MoveCategory.swift in Sources */,
 				D7BA13ABD52593573AA018AE /* MoveCategoryRepository.swift in Sources */,
+				D7BA1462E2D1FAE3118A3943 /* MoveTarget.swift in Sources */,
+				D7BA14932D2A0C186339B666 /* MoveTargetRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
