@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         self.resource = .moveCategory
         plistParser.parse(resource: .moveCategory)
 
+        self.resource = .moveTarget
+        plistParser.parse(resource: .moveTarget)
+
         self.resource = .move
         plistParser.parse(resource: .move)
     }
@@ -61,6 +64,7 @@ extension ViewController: ParserDelegate {
         case .type: self.loadedTypes(items: items)
         case .additionEffect: self.loadedAdditionEffects(items: items)
         case .moveCategory:   self.loadedMoveCategories(items: items)
+        case .moveTarget:     self.loadedMoveTargets(items: items)
         default: break
         }
     }
@@ -91,5 +95,12 @@ extension ViewController: ParserDelegate {
             MoveCategory(moveCategory: moveCategory)
         }
         MoveCategory.repository.add(moveCategories)
+    }
+
+    func loadedMoveTargets(items: [Item]) {
+        let moveTargets = items.map { moveTarget -> MoveTarget in
+            MoveTarget(moveTarget: moveTarget)
+        }
+        MoveTarget.repository.add(moveTargets)
     }
 }
