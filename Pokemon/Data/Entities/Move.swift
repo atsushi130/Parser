@@ -24,7 +24,7 @@ public final class Move: Object {
     @objc public dynamic var priority = 0
     @objc public dynamic var protect = true
     @objc public dynamic var steal = true
-    @objc public dynamic var target = "" // 型を MoveTarget にしたい
+    @objc public dynamic var target: MoveTarget!
     @objc public dynamic var type: Type!
     @objc public dynamic var vital: Bool = true
 
@@ -71,7 +71,7 @@ public final class Move: Object {
         self.priority = Int(move["priority"] as! String)!
         self.protect = Bool(move["protect"] as! String)!
         self.steal = Bool(move["steal"] as! String)!
-        self.target = move["target"] as! String
+        self.target = MoveTarget.repository.findBy(name: move["target"] as! String)!
         self.type = Type.repository.findBy(name: move["type"] as! String)!
 
         if let vital = move["vital"] as? String {
