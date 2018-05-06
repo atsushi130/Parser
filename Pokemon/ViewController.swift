@@ -23,6 +23,11 @@ class ViewController: UIViewController {
 
         let plistParser = Parser<Plist>()
         plistParser.delegate = self
+
+        self.resource = .type
+        plistParser.parse(resource: .type)
+
+        self.resource = .move
         plistParser.parse(resource: .move)
     }
 
@@ -45,11 +50,24 @@ class ViewController: UIViewController {
 
 extension ViewController: ParserDelegate {
     func didLoad(items: [Item]) {
+        switch self.resource {
+        case .move: self.loadedMoves(items: items)
+        case .type: self.loadedTypes(items: items)
+        default: break
+        }
+    }
 
+    func loadedMoves(items: [Item]) {
         let moves = items.enumerated().map { (index, item) -> Move in
             Move(move: item)
         }
-
         Move.repository.add(moves)
+    }
+
+    func loadedTypes(items: [Item]) {
+        let types = items.map { type -> Type in
+            Type(type: type)
+        }
+        Type.repository.add(types)
     }
 }
