@@ -30,6 +30,9 @@ class ViewController: UIViewController {
         self.resource = .additionEffect
         plistParser.parse(resource: .additionEffect)
 
+        self.resource = .moveCategory
+        plistParser.parse(resource: .moveCategory)
+
         self.resource = .move
         plistParser.parse(resource: .move)
     }
@@ -57,16 +60,15 @@ extension ViewController: ParserDelegate {
         case .move: self.loadedMoves(items: items)
         case .type: self.loadedTypes(items: items)
         case .additionEffect: self.loadedAdditionEffects(items: items)
+        case .moveCategory:   self.loadedMoveCategories(items: items)
         default: break
         }
     }
 
     func loadedMoves(items: [Item]) {
-
         let moves = items.enumerated().map { (index, item) -> Move in
             Move(move: item)
         }
-
         Move.repository.add(moves)
     }
 
@@ -82,5 +84,12 @@ extension ViewController: ParserDelegate {
             AdditionEffect(additionEffect: additionEffect)
         }
         AdditionEffect.repository.add(additionEffects)
+    }
+
+    func loadedMoveCategories(items: [Item]) {
+        let moveCategories = items.map { moveCategory -> MoveCategory in
+            MoveCategory(moveCategory: moveCategory)
+        }
+        MoveCategory.repository.add(moveCategories)
     }
 }
