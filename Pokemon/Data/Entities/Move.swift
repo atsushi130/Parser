@@ -8,25 +8,25 @@ import RealmSwift
 
 public final class Move: Object {
 
-    @objc dynamic var id = 0
-    @objc dynamic var name = ""
-    @objc dynamic var accuracy = 0
-    @objc dynamic var additionEffect: String? = "" // 型 AdditionEffect にしたい (やけど とか)
-    @objc dynamic var additionProbability: Double = 0.0
-    @objc dynamic var category = "" // 型を Category にしたい
-    @objc dynamic var despondency: Double = 0.0
-    @objc dynamic var direct = true
-    @objc dynamic var information = ""
-    @objc dynamic var magicCoat = true
-    @objc dynamic var parroting = true
-    @objc dynamic var power = 0
-    @objc dynamic var pp = 0
-    @objc dynamic var priority = 0
-    @objc dynamic var protect = true
-    @objc dynamic var steal = true
-    @objc dynamic var target = "" // 型を MoveTarget にしたい
-    @objc dynamic var type: Type!
-    @objc dynamic var vital: Bool = true
+    @objc public dynamic var id = 0
+    @objc public dynamic var name = ""
+    @objc public dynamic var accuracy = 0
+    @objc public dynamic var additionEffect: AdditionEffect? = nil
+    @objc public dynamic var additionProbability: Double = 0.0
+    @objc public dynamic var category = "" // 型を Category にしたい
+    @objc public dynamic var despondency: Double = 0.0
+    @objc public dynamic var direct = true
+    @objc public dynamic var information = ""
+    @objc public dynamic var magicCoat = true
+    @objc public dynamic var parroting = true
+    @objc public dynamic var power = 0
+    @objc public dynamic var pp = 0
+    @objc public dynamic var priority = 0
+    @objc public dynamic var protect = true
+    @objc public dynamic var steal = true
+    @objc public dynamic var target = "" // 型を MoveTarget にしたい
+    @objc public dynamic var type: Type!
+    @objc public dynamic var vital: Bool = true
 
     public convenience init(move: [String: Any]) {
         self.init()
@@ -40,7 +40,7 @@ public final class Move: Object {
             if additionEffect == "-" {
                 self.additionEffect = nil
             } else {
-                self.additionEffect = additionEffect
+                self.additionEffect = AdditionEffect.repository.findBy(name: additionEffect)
             }
         } else {
             self.additionEffect = nil
@@ -72,6 +72,8 @@ public final class Move: Object {
         self.protect = Bool(move["protect"] as! String)!
         self.steal = Bool(move["steal"] as! String)!
         self.target = move["target"] as! String
+
+        print(move["type"] as! String)
         self.type = Type.repository.findBy(name: move["type"] as! String)!
 
         if let vital = move["vital"] as? String {
