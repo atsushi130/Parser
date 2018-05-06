@@ -13,7 +13,7 @@ public final class Move: Object {
     @objc public dynamic var accuracy = 0
     @objc public dynamic var additionEffect: AdditionEffect? = nil
     @objc public dynamic var additionProbability: Double = 0.0
-    @objc public dynamic var category = "" // 型を Category にしたい
+    @objc public dynamic var category: MoveCategory!
     @objc public dynamic var despondency: Double = 0.0
     @objc public dynamic var direct = true
     @objc public dynamic var information = ""
@@ -53,7 +53,7 @@ public final class Move: Object {
             }
         }
 
-        self.category = move["category"] as! String
+        self.category = MoveCategory.repository.findBy(name: move["category"] as! String)!
 
         if let despondency = move["despondency"] as? String {
             if despondency != "-" {
@@ -72,8 +72,6 @@ public final class Move: Object {
         self.protect = Bool(move["protect"] as! String)!
         self.steal = Bool(move["steal"] as! String)!
         self.target = move["target"] as! String
-
-        print(move["type"] as! String)
         self.type = Type.repository.findBy(name: move["type"] as! String)!
 
         if let vital = move["vital"] as? String {
