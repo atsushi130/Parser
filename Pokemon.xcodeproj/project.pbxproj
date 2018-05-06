@@ -17,12 +17,16 @@
 		0DE3BA0E209EAFF900DA1FA1 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE3BA0C209EAFF900DA1FA1 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DE3BA11209EAFF900DA1FA1 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA0A209EAFF900DA1FA1 /* Data.framework */; };
 		0DE3BA13209EAFF900DA1FA1 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA0A209EAFF900DA1FA1 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0DE3BA19209EB18200DA1FA1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BA18209EB18200DA1FA1 /* Repository.swift */; };
+		0DE3BA1A209EB38A00DA1FA1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA03209EAF2900DA1FA1 /* RealmSwift.framework */; };
+		0DE3BA1B209EB38D00DA1FA1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA01209EAF1800DA1FA1 /* Realm.framework */; };
+		0DE3BA1C209EB9DC00DA1FA1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BA18209EB18200DA1FA1 /* Repository.swift */; };
 		D7BA11703DA79E595B16649C /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = D7BA16D3C4DE7F735DF19B62 /* abilities.json */; };
 		D7BA11AD91F5C8E3DF306B2C /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */; };
 		D7BA11D6FD215794F113CE93 /* abilities.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1863CA92B0DA13D2B09A /* abilities.xml */; };
+		D7BA11DED10525635A8452D2 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12FD2D49DB2607DC35F9 /* Move.swift */; };
 		D7BA12512557CAB8E1F6A4BE /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12A779073245C241C89C /* Plist.swift */; };
 		D7BA14CC5B91D652BC47E05A /* moves.xml in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1B1FD1C1B35B57F84BC9 /* moves.xml */; };
+		D7BA177F13940544E73BD31B /* MoveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA138AD8004417FF741CBC /* MoveRepository.swift */; };
 		D7BA183BC57A0913A80FBD7D /* abilities.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BA11A5455C76F79A58A01C /* abilities.plist */; };
 		D7BA19530187986DF51AFF3C /* moves.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1980F62F3B0DAF2B13C1 /* moves.plist */; };
 		D7BA1AFC8EA395C7CC0E6114 /* pokemons.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BA1FF6C2FE7C2761205033 /* pokemons.plist */; };
@@ -72,6 +76,8 @@
 		D7BA11A5455C76F79A58A01C /* abilities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = abilities.plist; path = Pokemon/Resources/abilities.plist; sourceTree = SOURCE_ROOT; };
 		D7BA11A8B6F890F36737C037 /* moves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = moves.json; path = Pokemon/Resources/moves.json; sourceTree = SOURCE_ROOT; };
 		D7BA12A779073245C241C89C /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		D7BA12FD2D49DB2607DC35F9 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		D7BA138AD8004417FF741CBC /* MoveRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
 		D7BA14466EC1E95106140E69 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		D7BA16D3C4DE7F735DF19B62 /* abilities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = abilities.json; path = Pokemon/Resources/abilities.json; sourceTree = SOURCE_ROOT; };
@@ -97,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE3BA1A209EB38A00DA1FA1 /* RealmSwift.framework in Frameworks */,
+				0DE3BA1B209EB38D00DA1FA1 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +170,7 @@
 				0DE3BA17209EB16300DA1FA1 /* Repository */,
 				0DE3BA0C209EAFF900DA1FA1 /* Data.h */,
 				0DE3BA0D209EAFF900DA1FA1 /* Info.plist */,
+				D7BA15F415FFC9CE4A6BDE52 /* Entities */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE3BA18209EB18200DA1FA1 /* Repository.swift */,
+				D7BA138AD8004417FF741CBC /* MoveRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -193,6 +203,14 @@
 				D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		D7BA15F415FFC9CE4A6BDE52 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D7BA12FD2D49DB2607DC35F9 /* Move.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		D7BA1B92628EC41752A5F5D5 /* Xml */ = {
@@ -354,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE3BA19209EB18200DA1FA1 /* Repository.swift in Sources */,
 				0D863365209DB06700C9672A /* ViewController.swift in Sources */,
 				0D863363209DB06700C9672A /* AppDelegate.swift in Sources */,
 				D7BA1FF4D7CE153B9F99B23E /* Parser.swift in Sources */,
@@ -368,6 +385,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BA177F13940544E73BD31B /* MoveRepository.swift in Sources */,
+				D7BA11DED10525635A8452D2 /* Move.swift in Sources */,
+				0DE3BA1C209EB9DC00DA1FA1 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +577,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Pokemon/Data/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -581,6 +605,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Pokemon/Data/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
