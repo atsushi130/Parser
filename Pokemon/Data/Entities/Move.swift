@@ -35,7 +35,6 @@ public final class Move: Object {
         self.name = move["name"] as! String
         self.accuracy = Int(move["accuracy"] as! String) ?? 0
 
-        let additionEffect: String?
         if let additionEffect = move["additionEffect"] as? String {
             if additionEffect == "-" {
                 self.additionEffect = nil
