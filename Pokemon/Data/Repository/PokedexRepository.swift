@@ -1,5 +1,5 @@
 //
-//  PokemonRepository.swift
+//  PokedexRepository.swift
 //  Data
 //
 //  Created by Atsushi Miyake on 2018/05/07.
