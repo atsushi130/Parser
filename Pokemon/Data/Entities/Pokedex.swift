@@ -1,5 +1,5 @@
 //
-//  Pokemon.swift
+//  Pokedex.swift
 //  Data
 //
 //  Created by Atsushi Miyake on 2018/05/07.
@@ -9,12 +9,13 @@
 import Foundation
 import RealmSwift
 
-public final class Pokemon: Object {
+public final class Pokedex: Object {
     
     @objc public dynamic var id = 0
     @objc public dynamic var name = ""
     public var types = List<Type>()
     public var moves = List<Move>()
+    public var abilities = List<Ability>()
 
     // 個体値
     @objc private dynamic var hp        = 0.0
@@ -106,14 +107,21 @@ public final class Pokemon: Object {
                 let move = Move.repository.findBy(name: searchName)!
                 self.moves.append(move)
             }
+
+        let abilities = pokemon["abilitys"] as! [[String: String]]
+        abilities.forEach { abilityDictionary in
+            let name = abilityDictionary["name"]!.replacingOccurrences(of:" ", with:"")
+            let ability = Ability.repository.findBy(name: name)!
+            self.abilities.append(ability)
+        }
     }
     
     public override static func primaryKey() -> String? {
         return "id"
     }
     
-    public static var repository: Repository<Pokemon> {
-        return Repository<Pokemon>()
+    public static var repository: Repository<Pokedex> {
+        return Repository<Pokedex>()
     }
 }
 
