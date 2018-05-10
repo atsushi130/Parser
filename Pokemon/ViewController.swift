@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         let plistParser = Parser<Plist>()
         plistParser.delegate = self
 
+        self.resource = .ability
+        plistParser.parse(resource: .ability)
+
         self.resource = .type
         plistParser.parse(resource: .type)
 
@@ -38,6 +41,9 @@ class ViewController: UIViewController {
 
         self.resource = .move
         plistParser.parse(resource: .move)
+
+        self.resource = .pokemon
+        plistParser.parse(resource: .pokemon)
     }
 
     func parse() {
@@ -60,13 +66,22 @@ class ViewController: UIViewController {
 extension ViewController: ParserDelegate {
     func didLoad(items: [Item]) {
         switch self.resource {
+        case .pokemon:  self.loadedPokemons(items: items)
         case .move: self.loadedMoves(items: items)
         case .type: self.loadedTypes(items: items)
         case .additionEffect: self.loadedAdditionEffects(items: items)
         case .moveCategory:   self.loadedMoveCategories(items: items)
         case .moveTarget:     self.loadedMoveTargets(items: items)
+        case .ability:        self.loadedAbilities(items: items)
         default: break
         }
+    }
+    
+    func loadedPokemons(items: [Item]) {
+        let pokemons = items.map { pokemon -> Pokedex in
+            Pokedex(pokemon: pokemon)
+        }
+        Pokedex.repository.add(pokemons)
     }
 
     func loadedMoves(items: [Item]) {
@@ -81,6 +96,13 @@ extension ViewController: ParserDelegate {
             Type(type: type)
         }
         Type.repository.add(types)
+    }
+
+    func loadedAbilities(items: [Item]) {
+        let abilities = items.map { ability -> Ability in
+            Ability(ability: ability)
+        }
+        Ability.repository.add(abilities)
     }
 
     func loadedAdditionEffects(items: [Item]) {
