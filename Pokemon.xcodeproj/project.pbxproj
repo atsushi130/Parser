@@ -27,6 +27,8 @@
 		0DE3BA27209F51FE00DA1FA1 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3BA26209F51FE00DA1FA1 /* default.realm */; };
 		0DE3BA2920A0993C00DA1FA1 /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BA2820A0993C00DA1FA1 /* Pokedex.swift */; };
 		0DE3BA2B20A09D1800DA1FA1 /* PokedexRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BA2A20A09D1800DA1FA1 /* PokedexRepository.swift */; };
+		0DE3BA2D20A47F3E00DA1FA1 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA2C20A47F3E00DA1FA1 /* Gifu.framework */; };
+		0DE3BA2E20A47F4400DA1FA1 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3BA2C20A47F3E00DA1FA1 /* Gifu.framework */; };
 		D7BA111E1EE73CB918FDCBDC /* MoveCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA12DB3CD69CB4516BC7BA /* MoveCategory.swift */; };
 		D7BA11703DA79E595B16649C /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = D7BA16D3C4DE7F735DF19B62 /* abilities.json */; };
 		D7BA11AD91F5C8E3DF306B2C /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA15C8BEA8E26918DA0DAE /* Parseable.swift */; };
@@ -99,6 +101,7 @@
 		0DE3BA26209F51FE00DA1FA1 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		0DE3BA2820A0993C00DA1FA1 /* Pokedex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
 		0DE3BA2A20A09D1800DA1FA1 /* PokedexRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexRepository.swift; sourceTree = "<group>"; };
+		0DE3BA2C20A47F3E00DA1FA1 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = Carthage/Build/iOS/Gifu.framework; sourceTree = SOURCE_ROOT; };
 		D7BA108350CD02529748AE19 /* PokemonBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonBody.swift; sourceTree = "<group>"; };
 		D7BA10D39C643CBE4E1741F2 /* PkemonStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PkemonStatus.swift; sourceTree = "<group>"; };
 		D7BA11A5455C76F79A58A01C /* abilities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = abilities.plist; path = Pokemon/Resources/abilities.plist; sourceTree = SOURCE_ROOT; };
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE3BA11209EAFF900DA1FA1 /* Data.framework in Frameworks */,
+				0DE3BA2D20A47F3E00DA1FA1 /* Gifu.framework in Frameworks */,
 				0DE3BA04209EAF2900DA1FA1 /* RealmSwift.framework in Frameworks */,
 				0DE3BA02209EAF1800DA1FA1 /* Realm.framework in Frameworks */,
 			);
@@ -143,6 +147,7 @@
 			files = (
 				0DE3BA1A209EB38A00DA1FA1 /* RealmSwift.framework in Frameworks */,
 				0DE3BA1B209EB38D00DA1FA1 /* Realm.framework in Frameworks */,
+				0DE3BA2E20A47F4400DA1FA1 /* Gifu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +202,7 @@
 		0DE3BA00209EAEFD00DA1FA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DE3BA2C20A47F3E00DA1FA1 /* Gifu.framework */,
 				0DE3BA03209EAF2900DA1FA1 /* RealmSwift.framework */,
 				0DE3BA01209EAF1800DA1FA1 /* Realm.framework */,
 			);
@@ -428,6 +434,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
 			);
 			outputPaths = (
 			);
