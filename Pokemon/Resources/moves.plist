@@ -3382,7 +3382,7 @@
 		<key>magicCoat</key>
 		<string>false</string>
 		<key>name</key>
-		<string>まんボルト</string>
+		<string>10まんボルト</string>
 		<key>parroting</key>
 		<string>true</string>
 		<key>power</key>
@@ -7022,7 +7022,7 @@
 		<key>magicCoat</key>
 		<string>false</string>
 		<key>name</key>
-		<string>テクスチャー２</string>
+		<string>テクスチャー2</string>
 		<key>parroting</key>
 		<string>false</string>
 		<key>power</key>
@@ -22319,6 +22319,46 @@
 		<string>選択</string>
 		<key>type</key>
 		<string>ほのお</string>
+		<key>vital</key>
+		<string>-</string>
+	</dict>
+	<dict>
+		<key>accuracy</key>
+		<string>100</string>
+		<key>additionEffect</key>
+		<string>-</string>
+		<key>additionProbabiliry</key>
+		<string>-</string>
+		<key>category</key>
+		<string>ぶつり</string>
+		<key>despondency</key>
+		<string>-</string>
+		<key>direct</key>
+		<string>false</string>
+		<key>id</key>
+		<string>559</string>
+		<key>information</key>
+		<string>クロスフレイムを受けた後に使うと威力が上がる</string>
+		<key>magicCoat</key>
+		<string>false</string>
+		<key>name</key>
+		<string>クロスサンダー</string>
+		<key>parroting</key>
+		<string>true</string>
+		<key>power</key>
+		<string>100</string>
+		<key>pp</key>
+		<string>5</string>
+		<key>priority</key>
+		<string>0</string>
+		<key>protect</key>
+		<string>true</string>
+		<key>steal</key>
+		<string>false</string>
+		<key>target</key>
+		<string>選択</string>
+		<key>type</key>
+		<string>でんき</string>
 		<key>vital</key>
 		<string>-</string>
 	</dict>
