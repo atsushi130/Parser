@@ -39,7 +39,7 @@ public final class Repository<ObjectType: Object> {
         return self.realm.objects(ObjectType.self).first
     }
 
-    func find(pk: Int) -> ObjectType? {
+    public func find(pk: Int) -> ObjectType? {
         return self.findAll().filter("id == %@", pk).first
     }
 
