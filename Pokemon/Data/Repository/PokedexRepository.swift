@@ -9,7 +9,13 @@
 import Foundation
 
 extension Repository where ObjectType: Pokedex {
+    
     public static var repository: Repository<ObjectType> {
         return Repository<ObjectType>()
+    }
+    
+    public func findBy(name: String) -> ObjectType? {
+        let codePredicate = NSPredicate(format: "name == %@", name)
+        return Repository<ObjectType>.repository.findAll(predicate: codePredicate).first
     }
 }
